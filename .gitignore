@@ -10,3 +10,4 @@ build/
 recall.yaml
 .smoke/
 .bench/
+.demo/
