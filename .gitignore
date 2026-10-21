@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# 个人配置与本地数据，不入库
+recall.yaml
+.smoke/
+.bench/

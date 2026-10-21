@@ -1,0 +1,22 @@
+# Recall 配置示例。复制为 recall.yaml（放当前目录）或 ~/.recall/config.yaml
+# 路径写法：推荐正斜杠 D:/Notes；若用反斜杠请加单引号 'D:\Notes'
+
+folders: []                # 要索引的文件夹，可写多个
+#  - C:/Users/me/Documents
+#  - D:/Notes
+
+db_path: ""                # 数据库位置，留空默认 ~/.recall/recall.db
+
+# 中文分词：jieba（查准好、短词支持好，默认）| trigram（零依赖子串匹配，索引稍大）
+tokenizer: jieba
+
+max_file_size_mb: 20       # 超过此大小的原始文件不索引（保护索引速度）
+max_text_chars: 2000000    # 单文件抽取出的文本上限（超长日志截断）
+chunk_chars: 600           # 检索块目标大小（字符）
+
+exclude_globs:             # 相对路径的 fnmatch 通配，可按需加
+  - "**/*.tmp"
+  - "**/*~"
+
+rescan_minutes: 30         # watch 模式周期重扫（防漏事件）
+debounce_seconds: 2        # 文件事件防抖，静默这么久才入库
