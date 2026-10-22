@@ -11,3 +11,4 @@ recall.yaml
 .smoke/
 .bench/
 .demo/
+.data/
